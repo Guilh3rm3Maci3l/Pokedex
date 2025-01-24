@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+#attack-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffcb05;
+    border-radius: 10px 10px 0 0;
+    color: #003a5d;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#attack-info {
+    font-size: 1.2rem;
+    color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+#attack-info h3 {
+    color: #ffcb05;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ffcb05;
+    border: none;
+    color: #003a5d;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f8a700;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    background-color: #e58d00;
+}
