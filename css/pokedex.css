@@ -1,3 +1,4 @@
+/* General Styling */
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
@@ -19,37 +20,30 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#generation-filter {
+    margin-bottom: 1rem;
+}
+
+#generation-select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+/* Pokémon List */
 .pokemons {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr; 
-    grid-auto-rows: 1fr; 
+    grid-template-columns: repeat(1, 1fr); 
     gap: 2rem; 
     padding: 0; 
 }
 
-@media screen and (min-width: 576px) {
-    .pokemons {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .pokemons {
-        grid-template-columns: repeat(3, 1fr); 
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .pokemons {
-        grid-template-columns: repeat(4, 1fr); 
-    }
-}
-
-
+/* Pokemon Card */
 .pokemon {
     padding: 1.5rem;
-    background-color: #49d0b0;
     border-radius: 1rem;
     color: #fff;
     display: flex;
@@ -65,14 +59,12 @@ body {
     transform: translateY(-5px); 
 }
 
-
 .pokemon .number {
     color: #000;
     opacity: 0.3;
     font-size: 0.875rem;
     text-align: right;
 }
-
 
 .pokemon .detail {
     display: flex;
@@ -91,7 +83,7 @@ body {
 }
 
 .pokemon .detail .types .type {
-    background-color: #1dd2a7;
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
     text-align: center;
@@ -100,21 +92,47 @@ body {
     border: 2px solid #fff;
 }
 
-
 .pokemon img {
     max-width: 80px;
     max-height: 80px;
     align-self: center; 
 }
 
-/* Ajustes para telas pequenas */
-@media screen and (max-width: 576px) {
-    .pokemon {
-        align-items: center; 
-        }
+/* Type Background Colors */
+.pokemon.grass { background-color: #78C850; }
+.pokemon.poison { background-color: #A040A0; }
+.pokemon.fire { background-color: #F08030; }
+.pokemon.water { background-color: #6890F0; }
+.pokemon.bug { background-color: #A8B820; }
+.pokemon.normal { background-color: #A8A878; }
+.pokemon.electric { background-color: #F8D030; }
+.pokemon.ground { background-color: #E0C068; }
+.pokemon.fairy { background-color: #EE99AC; }
+.pokemon.fighting { background-color: #C03028; }
+.pokemon.psychic { background-color: #F85888; }
+.pokemon.rock { background-color: #B8A038; }
+.pokemon.ghost { background-color: #705898; }
+.pokemon.ice { background-color: #98D8D8; }
+.pokemon.dragon { background-color: #7038F8; }
+.pokemon.dark { background-color: #705848; }
+.pokemon.steel { background-color: #B8B8D0; }
+.pokemon.flying { background-color: #A890F0; }
 
-    .pokemon .detail {
-        flex-direction: column; 
-        align-items: center;
+/* Media Queries */
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .pokemons {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
